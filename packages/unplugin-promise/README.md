@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>promise</h1>
+<h1>unplugin-promise</h1>
 
 **Functional utilities for promises.**
 
