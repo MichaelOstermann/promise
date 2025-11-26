@@ -11,4 +11,4 @@
  * const promise = Promise.reject("error"); // Promise<never>
  * ```
  */
-export const reject = globalThis.Promise.reject
+export const reject = globalThis.Promise.reject.bind(globalThis.Promise)

@@ -11,4 +11,4 @@
  * const promise = Promise.resolve(42); // Promise<42>
  * ```
  */
-export const resolve = globalThis.Promise.resolve
+export const resolve = globalThis.Promise.resolve.bind(globalThis.Promise)

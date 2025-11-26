@@ -20,4 +20,4 @@
  * // ]
  * ```
  */
-export const allSettled = globalThis.Promise.allSettled
+export const allSettled = globalThis.Promise.allSettled.bind(globalThis.Promise)

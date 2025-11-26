@@ -15,4 +15,4 @@
  * ]); // [1, 2, 3]
  * ```
  */
-export const all = globalThis.Promise.all
+export const all = globalThis.Promise.all.bind(globalThis.Promise)

@@ -15,4 +15,4 @@
  * ]); // 2
  * ```
  */
-export const any = globalThis.Promise.any
+export const any = globalThis.Promise.any.bind(globalThis.Promise)
