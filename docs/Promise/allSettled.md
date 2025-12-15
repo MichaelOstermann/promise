@@ -10,9 +10,9 @@ Waits for all promises to settle (resolve or reject) and returns an array of the
 import { Promise } from "@monstermann/promise";
 
 const results = await Promise.allSettled([
-  Promise.resolve(1),
-  Promise.reject("error"),
-  Promise.resolve(3)
+    Promise.resolve(1),
+    Promise.reject("error"),
+    Promise.resolve(3),
 ]);
 // [
 //   { status: "fulfilled", value: 1 },

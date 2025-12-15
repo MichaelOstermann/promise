@@ -10,6 +10,6 @@ Creates a new promise with an executor function that receives resolve and reject
 import { Promise } from "@monstermann/promise";
 
 const promise = Promise.create<number>((resolve, reject) => {
-  setTimeout(() => resolve(42), 1000);
+    setTimeout(() => resolve(42), 1000);
 });
 ```
