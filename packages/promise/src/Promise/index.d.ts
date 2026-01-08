@@ -6,6 +6,7 @@
 
 import { all } from "./all.js";
 import { allSettled } from "./allSettled.js";
+import { andThen } from "./andThen.js";
 import { any } from "./any.js";
 import { create } from "./create.js";
 import { debounce } from "./debounce.js";
@@ -19,7 +20,6 @@ import { orElse } from "./orElse.js";
 import { queue } from "./queue.js";
 import { reject } from "./reject.js";
 import { resolve } from "./resolve.js";
-import { then } from "./then.js";
 import { throttle } from "./throttle.js";
 import { Throttled } from "./throttle.js";
 import { wait } from "./wait.js";
@@ -28,6 +28,7 @@ declare namespace Promise {
     export {
         all,
         allSettled,
+        andThen,
         any,
         create,
         debounce,
@@ -38,7 +39,6 @@ declare namespace Promise {
         queue,
         reject,
         resolve,
-        then,
         throttle,
         wait,
     }

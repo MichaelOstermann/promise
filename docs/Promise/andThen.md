@@ -1,7 +1,7 @@
-# then
+# andThen
 
 ```ts
-function Promise.then<T, U>(
+function Promise.andThen<T, U>(
     target: Promise<T>,
     onResolved: (value: NoInfer<T>) => U | PromiseLike<U>,
     onRejected?:
@@ -20,7 +20,7 @@ Transforms resolved promise values with `onResolved`. This is an alias for `Prom
 ```ts [data-first]
 import { Promise } from "@monstermann/promise";
 
-Promise.then(Promise.resolve(5), (x) => x * 2); // Promise<10>
+Promise.andThen(Promise.resolve(5), (x) => x * 2); // Promise<10>
 ```
 
 ```ts [data-last]
@@ -28,7 +28,7 @@ import { Promise } from "@monstermann/promise";
 
 pipe(
     Promise.resolve(5),
-    Promise.then((x) => x * 2),
+    Promise.andThen((x) => x * 2),
 ); // Promise<10>
 ```
 
