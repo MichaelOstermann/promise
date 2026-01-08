@@ -1,6 +1,8 @@
 # throttle
 
-`Promise.throttle(fn, options)`
+```ts
+function Promise.throttle(...args: T): void
+```
 
 Creates a throttled function that limits how often `fn` can be invoked based on `options.wait` milliseconds.
 

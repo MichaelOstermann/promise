@@ -1,6 +1,8 @@
 # any
 
-`Promise.any(values)`
+```ts
+function Promise.any<T extends readonly unknown[] | []>(values: T): Promise<Awaited<T[number]>>
+```
 
 Waits for the first promise to resolve and returns its result. If all promises reject, it rejects with an AggregateError.
 

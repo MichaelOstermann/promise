@@ -1,5 +1,9 @@
 /**
- * `Promise.is(target)`
+ * # is
+ *
+ * ```ts
+ * function Promise.is(target: unknown): target is Promise<unknown>
+ * ```
  *
  * Checks if `target` is a Promise instance.
  *
@@ -11,6 +15,7 @@
  * Promise.is(Promise.resolve()); // true
  * Promise.is("hello"); // false
  * ```
+ *
  */
 export function is(target: unknown): target is Promise<unknown> {
     return target instanceof Promise

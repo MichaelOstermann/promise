@@ -1,6 +1,8 @@
 # wait
 
-`Promise.wait(duration)`
+```ts
+function Promise.wait(duration: number): Promise<void>
+```
 
 Creates a promise that resolves after `duration` milliseconds.
 

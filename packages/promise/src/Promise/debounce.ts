@@ -19,7 +19,11 @@ type DebounceOptions = {
 }
 
 /**
- * `Promise.debounce(fn, options)`
+ * # debounce
+ *
+ * ```ts
+ * function Promise.debounce(...args: T): void
+ * ```
  *
  * Creates a debounced function that delays invoking `fn` until after `options.wait` milliseconds have elapsed since the last time the debounced function was invoked.
  *
@@ -31,6 +35,8 @@ type DebounceOptions = {
  * ## Example
  *
  * ```ts
+ * import { Promise } from "@monstermann/promise";
+ *
  * const debouncedSave = Promise.debounce(saveData, {
  *     wait: 1000,
  *     // Maximum time to wait after the first call, default: undefined
@@ -56,6 +62,9 @@ type DebounceOptions = {
  *
  * // Wait until idle, if a `gracePeriod` is given then wait
  * // until it has been idle for `gracePeriod` milliseconds
+ * await debouncedSave.idle(gracePeriod?: number);
+ * ```
+ *
  */
 export function debounce<T extends unknown[]>(
     fn: (...args: T) => void | Promise<void>,

@@ -1,6 +1,15 @@
 # then
 
-`Promise.then(target, onResolved, onRejected?)`
+```ts
+function Promise.then<T, U>(
+    target: Promise<T>,
+    onResolved: (value: NoInfer<T>) => U | PromiseLike<U>,
+    onRejected?:
+        | ((reason: any) => U | PromiseLike<U>)
+        | null
+        | undefined,
+): Promise<U>
+```
 
 Transforms resolved promise values with `onResolved`. This is an alias for `Promise.then`.
 

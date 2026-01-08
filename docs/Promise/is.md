@@ -1,6 +1,8 @@
 # is
 
-`Promise.is(target)`
+```ts
+function Promise.is(target: unknown): target is Promise<unknown>
+```
 
 Checks if `target` is a Promise instance.
 

@@ -10,13 +10,19 @@ type LimitOptions = number | {
 }
 
 /**
- * `Promise.limit(fn, options)`
+ * # limit
+ *
+ * ```ts
+ * function Promise.limit(...args: T): Promise<Awaited<U>>
+ * ```
  *
  * Limits the concurrency of function execution.
  *
  * ## Example
  *
  * ```ts
+ * import { Promise } from "@monstermann/promise";
+ *
  * const limitedFetch = Promise.limit(fetch, { concurrency: 3 });
  * const limitedFetch2 = Promise.limit(fetch, 3); // Shorthand
  *
@@ -29,6 +35,9 @@ type LimitOptions = number | {
  * ]);
  *
  * // Wait for queue to become idle
+ * await limitedFetch.idle();
+ * ```
+ *
  */
 export function limit<T extends unknown[], U>(
     fn: (...args: T) => U,

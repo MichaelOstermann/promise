@@ -12,13 +12,19 @@ type QueueOptions = number | {
 }
 
 /**
- * `Promise.queue(options)`
+ * # queue
+ *
+ * ```ts
+ * function Promise.queue(options: QueueOptions): Queue
+ * ```
  *
  * Creates a queue that limits concurrent execution of tasks.
  *
  * ## Example
  *
  * ```ts
+ * import { Promise } from "@monstermann/promise";
+ *
  * const taskQueue = Promise.queue({ concurrency: 2 });
  * const taskQueue2 = Promise.queue(2); // shorthand
  *
@@ -30,6 +36,9 @@ type QueueOptions = number | {
  * ]);
  *
  * // Wait for queue to become idle
+ * await taskQueue.idle();
+ * ```
+ *
  */
 export function queue(options: QueueOptions): Queue {
     const concurrency = getConcurrency(options)

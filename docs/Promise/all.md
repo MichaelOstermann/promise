@@ -1,6 +1,8 @@
 # all
 
-`Promise.all(values)`
+```ts
+function Promise.all<T>(values: Iterable<T | PromiseLike<T>>): Promise<Awaited<T>[]>
+```
 
 Waits for all promises to resolve and returns an array of their results. If any promise rejects, the entire operation rejects with that reason.
 

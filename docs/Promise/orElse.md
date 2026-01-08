@@ -1,6 +1,11 @@
 # orElse
 
-`Promise.orElse(target, onRejected)`
+```ts
+function Promise.orElse<T, U>(
+    target: Promise<T>,
+    onRejected: (reason: unknown) => U | PromiseLike<U>,
+): Promise<T | U>
+```
 
 Catches rejected promises and handles them with `onRejected`. This is an alias for `Promise.catch`.
 

@@ -18,7 +18,11 @@ type ThrottleOptions = {
 }
 
 /**
- * `Promise.throttle(fn, options)`
+ * # throttle
+ *
+ * ```ts
+ * function Promise.throttle(...args: T): void
+ * ```
  *
  * Creates a throttled function that limits how often `fn` can be invoked based on `options.wait` milliseconds.
  *
@@ -30,6 +34,8 @@ type ThrottleOptions = {
  * ## Example
  *
  * ```ts
+ * import { Promise } from "@monstermann/promise";
+ *
  * const throttledSave = Promise.throttle(saveData, {
  *     wait: 1000,
  *     // Invoke function on the leading edge, default: false
@@ -53,6 +59,9 @@ type ThrottleOptions = {
  *
  * // Wait until idle, if a `gracePeriod` is given then wait
  * // until it has been idle for `gracePeriod` milliseconds
+ * await throttledSave.idle(gracePeriod?: number);
+ * ```
+ *
  */
 export function throttle<T extends unknown[]>(
     fn: (...args: T) => void | Promise<void>,

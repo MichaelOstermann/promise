@@ -1,6 +1,8 @@
 # reject
 
-`Promise.reject(reason)`
+```ts
+function Promise.reject<T = never>(reason?: any): Promise<T>
+```
 
 Creates a promise that is rejected with the given reason.
 

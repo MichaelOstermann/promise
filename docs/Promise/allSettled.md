@@ -1,6 +1,8 @@
 # allSettled
 
-`Promise.allSettled(values)`
+```ts
+function Promise.allSettled<T extends readonly unknown[] | []>(values: T): Promise<{ -readonly [P in keyof T]: PromiseSettledResult<Awaited<T[P]>>; }>
+```
 
 Waits for all promises to settle (resolve or reject) and returns an array of their results with status information.
 

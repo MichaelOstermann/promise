@@ -1,6 +1,8 @@
 # resolve
 
-`Promise.resolve(value)`
+```ts
+function Promise.resolve<T>(value: T): Promise<Awaited<T>>
+```
 
 Creates a promise that resolves with the given value. If the value is already a promise, it returns that promise.
 

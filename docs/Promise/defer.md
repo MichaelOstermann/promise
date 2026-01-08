@@ -1,6 +1,8 @@
 # defer
 
-`Promise.defer()`
+```ts
+function Promise.defer<T = void>(): Deferred<T>
+```
 
 Creates a promise that can be resolved/rejected from the outside.
 

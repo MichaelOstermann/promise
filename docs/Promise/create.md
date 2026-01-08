@@ -1,6 +1,13 @@
 # create
 
-`Promise.create(executor)`
+```ts
+function Promise.create<T>(
+    executor: (
+        resolve: (value: T | PromiseLike<T>) => void,
+        reject: (reason?: any) => void,
+    ) => void,
+): Promise<T>
+```
 
 Creates a new promise with an executor function that receives resolve and reject callbacks.
 

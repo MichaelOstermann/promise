@@ -1,6 +1,8 @@
 # queue
 
-`Promise.queue(options)`
+```ts
+function Promise.queue(options: QueueOptions): Queue
+```
 
 Creates a queue that limits concurrent execution of tasks.
 

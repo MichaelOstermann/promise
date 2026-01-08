@@ -1,6 +1,8 @@
 # limit
 
-`Promise.limit(fn, options)`
+```ts
+function Promise.limit(...args: T): Promise<Awaited<U>>
+```
 
 Limits the concurrency of function execution.
 

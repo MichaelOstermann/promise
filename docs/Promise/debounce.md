@@ -1,6 +1,8 @@
 # debounce
 
-`Promise.debounce(fn, options)`
+```ts
+function Promise.debounce(...args: T): void
+```
 
 Creates a debounced function that delays invoking `fn` until after `options.wait` milliseconds have elapsed since the last time the debounced function was invoked.
 
