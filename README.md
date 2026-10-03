@@ -1,3 +1,6 @@
+> [!WARNING]
+> This package is no longer maintained. It moved into [`@monstermann/fn`](https://github.com/MichaelOstermann/fn) as the `Async` namespace.
+
 <div align="center">
 
 <h1>promise</h1>
